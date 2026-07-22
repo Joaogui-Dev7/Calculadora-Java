@@ -8,33 +8,71 @@ public class Calculadora_programa
 
 
         System.out.println("Digite o primeiro número: ");
-        float num1 = scanner.nextFloat();
-
-        System.out.println("Digite o segundo número: ");
-        float num2 = scanner.nextFloat();
+        int num1 = scanner.nextInt();
 
         System.out.println("Qual operação deseja fazer(+, -, /, *)? ");
-        char operação = scanner.next().charAt(0);
+        char operacao = scanner.next().charAt(0);
 
-        switch operação
+        System.out.println("Digite o segundo número: ");
+        int num2 = scanner.nextInt();
+
+        float result;
+
+        switch (operacao)
         {
-            case +:
+            case '+':
+                System.out.println("Soma bizarra");
 
+                result = soma(num1, num2);
+                System.out.println(result);
+
+                break;
+
+            case '-':
+                System.out.println("subtração bizarra");
+
+                result = sub(num1, num2);
+                System.out.println(result);
+
+                break;
+
+            case '/':
+                System.out.println("divisão bizarra");
+
+                result = div(num1, num2);
+                System.out.println(result);
+
+                break;
+
+            case '*':
+                System.out.println("multiplicação bizarra");
+
+                result = mult(num1, num2);
+                System.out.println(result);
+
+                break;
         }
     }
 
 
-    public static int soma(int num1, int num2)
-    {
-        int resultado_soma1 = num1+ num2;
 
-        return resultado_soma1;
+    public static float soma(int a, int b)
+    {
+        return (float) a + b;
     }
 
-    public static int sub(int num1, int num2)
+    public static float sub(int a, int b)
     {
-        int resultado_sub1 = num1 - num2;
+        return (float) a - b;
+    }
 
-        return resultado_sub1;
+    public static float div(int a, int b)
+    {
+        return (float) a / b;
+    }
+
+    public static float mult(int a, int b)
+    {
+        return (float) a * b;
     }
 }
